@@ -13,7 +13,7 @@ describe('summernote-imagehandler', function () {
         assert.equal(summernoteSource.files.length, 2);
     });
     for (var i = 0; i < summernoteSource.files.length; i++) {
-        var newFile = 'test/new_file' + i.toString() + '.png';
+        var newFile = 'test/new_file' + i.toString() + '.' + summernoteSource.files[i].extension;
         fs.createReadStream(summernoteSource.files[i].file).pipe(fs.createWriteStream(newFile));
         it('File ' + i.toString() + ' should create a file equal to the original', function (done) {
             fs.readFile(newFile, 'base64', function (err, data) {

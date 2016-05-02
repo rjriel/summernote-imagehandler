@@ -34,7 +34,8 @@ function Converter(src) {
                             id: identifier,
                             base64: base64,
                             origSrc: imageData,
-                            file: newFile
+                            file: newFile,
+                            extension: extension
                         });
                         this.source = this.source.substr(0, imageIndex + 1) + identifier + this.source.substr(endIndex);
                     }
