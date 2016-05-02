@@ -1,0 +1,27 @@
+{
+  "name": "summernote-imagehandler",
+  "version": "1.0.0",
+  "description": "Locate instances where summernote has placed a Base64 encoded image and allow for the ability to replace the <img> elements 'src' attribute.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "summernote",
+    "image",
+    "base64"
+  ],
+  "author": "Rene-Jacques Riel",
+  "license": "ISC",
+  "dependencies": {
+    "temp": "^0.8.3",
+    "uuid": "^2.0.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
