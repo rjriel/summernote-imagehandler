@@ -25,11 +25,12 @@ function Converter(src) {
                         base64Index += 7;
                         var base64 = imageData.substr(base64Index);
                         var newFile = temp.path({suffix: '.' + extension});
-                        fs.writeFile(newFile, base64, 'base64', function (err) {
-                            if(err) {
-                                console.log(err);
-                            }
-                        });
+                        try {
+                          fs.writeFileSync(newFile, base64, 'base64'); 
+                        }
+                        catch (err) {
+                          console.error(err);
+                        }
                         this.files.push({
                             id: identifier,
                             base64: base64,
